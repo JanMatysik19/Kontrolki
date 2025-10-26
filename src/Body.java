@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.geom.RoundRectangle2D;
 
 public class Body extends JPanel {
-    private Image bgImg;
+    private final Image bgImg;
 
     public static final int WINDOW_RADIUS = 25;
     private static final Color WINDOW_BORDER_COLOR = new Color(59, 61, 69);

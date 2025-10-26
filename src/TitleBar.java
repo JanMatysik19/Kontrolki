@@ -5,10 +5,6 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 
 public class TitleBar extends JPanel {
-    private CloseBtn closeBtn;
-    private MinimizeBtn minimizeBtn;
-    private JPanel eastButtons;
-
     private final JFrame appFrame;
     private final Point clickPoint = new Point();
 
@@ -25,14 +21,14 @@ public class TitleBar extends JPanel {
         addMouseListener(new BarClickHandler());
         addMouseMotionListener(new BarMouseMoveHandler());
 
-        eastButtons = new JPanel();
+        var eastButtons = new JPanel();
         eastButtons.setLayout(new BoxLayout(eastButtons, BoxLayout.X_AXIS));
         eastButtons.setOpaque(false);
 
-        minimizeBtn = new MinimizeBtn(appFrame);
+        var minimizeBtn = new MinimizeBtn(appFrame);
         eastButtons.add(minimizeBtn);
 
-        closeBtn = new CloseBtn();
+        var closeBtn = new CloseBtn();
         eastButtons.add(closeBtn);
 
         add(eastButtons, BorderLayout.EAST);

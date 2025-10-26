@@ -2,20 +2,15 @@ import javax.swing.*;
 import java.awt.*;
 
 public class App extends JFrame {
-    private Body content;
-    private Main main;
-    private TitleBar titleBar;
-
-
     public App() {
-        content = new Body();
+        var content = new Body();
         setContentPane(content);
 
 
-        titleBar = new TitleBar(this);
+        var titleBar = new TitleBar(this);
         content.add(titleBar, BorderLayout.NORTH);
 
-        main = new Main();
+        var main = new Main();
         content.add(main, BorderLayout.CENTER);
 
 
